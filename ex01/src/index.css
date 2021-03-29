@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+.keyboard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8.33%, 1fr));
+	  grid-gap: 0;
+	  grid-auto-rows: minmax(40px, auto);
+	  grid-auto-flow: dense;
+	  width: 720px;
+	  box-sizing: border-box;
+  }
+  
+  #text {
+    width: 50%;
+  }
+  
+  #keyboard {
+    width: 50%;
+  }
+  
+  textarea {
+    width: 100%;
+    background-color: rgb(226, 236, 255);
+    border-width: 2px;
+    border-color: rgb(155, 161, 173);
+    box-sizing: border-box;
+  }
+  
+  .key {
+    display: block;
+	  margin: 0 auto;
+	  width: 720px;
+	  max-width: 100%;
+  }
+  button.backspace {
+    grid-column-end: span 3;
+    grid-row-end: span 1;
+  }
+  
+  button.caps-lock {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+  }
+  
+  button.enter {
+    grid-column-end: span 9;
+    grid-row-end: span 1;
+  }
+  
+  /* Media Querry */
+  @media screen and (max-width: 1000px) {
+    #keyboard {
+      width: 60%;
+    }
+    #text {
+      width: 60%;
+    }
+    .key {
+      font-size: 1.3rem;
+    }
+    #title {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    #keyboard {
+      width: 80%;
+    }
+    #text {
+      width: 80%;
+    }
+    .key {
+      font-size: 1.1rem;
+    }
+    #title {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #keyboard {
+      width: 95%;
+    }
+    #text {
+      width: 95%;
+    }
+    .key {
+      font-size: 1rem;
+    }
+    #title {
+      font-size: 1rem;
+    }
+  }
